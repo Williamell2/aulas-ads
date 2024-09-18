@@ -1,0 +1,23 @@
+.minhaclasse{
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 10px;
+}
+.botao{
+    background-color: aqua;
+    margin: 15px;
+    color: brown;
+    padding: 25px;
+    border: 0;
+}
+#botao{
+    cursor: pointer;
+    zoom:1.5;
+}
+*{
+    background-color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+}

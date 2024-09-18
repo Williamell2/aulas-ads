@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/web12pnd/assets/css/tabela.css">
+    <title>Tabela Do Brasileirão</title>
+</head>
+<body>
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/listaDeTarefa.html">Lista de Tarefa</a>
+        <a href="/TabelaDoBrasileirão.html">Tabela do Brasileirão</a>
+    </nav>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3" width="200px">Clube</th>
+                <th class="pts" >Pts</th>
+                <th>Pj</th>
+                <th>Vit</th>
+                <th>E</th>
+                <th>D</th>
+                <th>GM</th>
+                <th>GC</th>
+                <th>SG</th>
+                <th>Ultimas 5</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <div></div>
+                <td>1</td>
+                <td class="tdespaço"><img src=" data:image/png;base64,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" alt="" class="icone-time"></td>
+                <td>Botafogo</td>
+                <td class="pts">50</td>
+                <td>25</td>
+                <td>15</td>
+                <td>5</td>
+                <td>5</td>
+                <td>43</td>
+                <td>24</td>
+                <td>19</td>
+                <td >
+
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/derrota.svg" alt="">
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/empate.svg" alt="">
+                    <img src="/web12pnd/images/vitoriaDestaque.svg" alt="">
+                </td>
+
+            </tr>
+            <tr>
+               
+                <td >2</td>
+                <td class="tdespaço"><img src="https://ssl.gstatic.com/onebox/media/sports/logos/me10ephzRxdj45zVq1Risg_48x48.png" alt="" class="icone-time"></td>
+                <td>Fortaleza</td>
+                <td class="pts">48</td>
+                <td>24</td>
+                <td>14</td>
+                <td>6</td>
+                <td>4</td>
+                <td>30</td>
+                <td>22</td>
+                <td>8</td>
+                <td>
+
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/derrotaDestaque.svg" alt="">
+                </td>
+
+            
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="tdespaço"><img src="data:image/png;base64,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" alt="" class="icone-time"></td>
+                <td>Palmeiras</td>
+                <td class="pts">47</td>
+                <td>25</td>
+                <td>14</td>
+                <td>5</td>
+                <td>6</td>
+                <td>38</td>
+                <td>19</td>
+                <td>19</td>
+                <td>
+
+                    <img src="/web12pnd/images/empate.svg" alt="">
+                    <img src="/web12pnd/images/empate.svg" alt="">
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                </td>
+
+            </tr>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="tdespaço"><img src="https://ssl.gstatic.com/onebox/media/sports/logos/orE554NToSkH6nuwofe7Yg_48x48.png" alt="" class="icone-time"></td>
+            <td>Flamengo</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>5</td>
+            <td class="tdespaço"><img src="https://ssl.gstatic.com/onebox/media/sports/logos/4w2Z97Hf9CSOqICK3a8AxQ_48x48.png" alt="" class="icone-time"></td>
+            <td>São Paulo</td>
+            <td class="pts">44</td>
+            <td>26</td>
+            <td>13</td>
+            <td>5</td>
+            <td>8</td>
+            <td>34</td>
+            <td>26</td>
+            <td>8</td>
+            <td>
+
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/derrota.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/derrota.svg" alt="">
+                <img src="/web12pnd/images/vitoriaDestaque.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>6</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Bahia</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>7</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Cruzeiro</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>8</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Internacional</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>9</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Vasco da Gama</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>10</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Atlético-MG</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>11</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Juventude</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>12</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Bragantina</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>13</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Athletico-PR</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>14</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Grêmio</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>15</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Criciúma</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>16</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Fluminense</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>17</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>EC Vitória</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>18</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Corinthians</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>19</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Cuiabá</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+        <tr>
+            <td>20</td>
+            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
+            <td>Atlético-GO</td>
+            <td class="pts">44</td>
+            <td>24</td>
+            <td>13</td>
+            <td>5</td>
+            <td>6</td>
+            <td>39</td>
+            <td>28</td>
+            <td>11</td>
+            <td>
+
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/empate.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+                <img src="/web12pnd/images/vitoria.svg" alt="">
+            </td>
+
+        </tr>
+            
+            
+
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+</body>
+</html>
