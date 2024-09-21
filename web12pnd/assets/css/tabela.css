@@ -7,10 +7,20 @@
     float: left;
 }
 .pts{
-    font-weight: 900;
+ padding-left: 48px;
     
    
    }
 .barralateral{
     background-color: blue;
+}
+.pj{
+    padding-left: 20px;
+}
+.vit{
+    padding-left: 20px;
+}
+.lateral{
+    width:2px;
+    background-color: green;
 }

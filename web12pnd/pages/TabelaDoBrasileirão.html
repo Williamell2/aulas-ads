@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/web12pnd/assets/css/tabela.css">
     <title>Tabela Do Brasileirão</title>
+
 </head>
 <body>
     <nav>
@@ -18,8 +19,8 @@
             <tr>
                 <th colspan="3" width="200px">Clube</th>
                 <th class="pts" >Pts</th>
-                <th>Pj</th>
-                <th>Vit</th>
+                <th class="pj">Pj</th>
+                <th class="vit">Vit</th>
                 <th>E</th>
                 <th>D</th>
                 <th>GM</th>
@@ -31,27 +32,27 @@
         <tbody>
     
             <tr>
-                <div></div>
+                <td class="lateral"></td>
                 <td>1</td>
                 <td class="tdespaço"><img src=" data:image/png;base64,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" alt="" class="icone-time"></td>
                 <td>Botafogo</td>
                 <td class="pts">50</td>
-                <td>25</td>
+                <td class="pj">25</td>
                 <td>15</td>
                 <td>5</td>
                 <td>5</td>
                 <td>43</td>
                 <td>24</td>
-                <td>19</td>
+                <td class="sg">19</td>
                 <td >
 
                     <img src="/web12pnd/images/vitoria.svg" alt="">
                     <img src="/web12pnd/images/derrota.svg" alt="">
                     <img src="/web12pnd/images/vitoria.svg" alt="">
                     <img src="/web12pnd/images/empate.svg" alt="">
-                    <img src="/web12pnd/images/vitoriaDestaque.svg" alt="">
+                    <img src="/web12pnd/images/vitoriaDestaq.svg" alt="">
                 </td>
-
+    
             </tr>
             <tr>
                
@@ -72,7 +73,7 @@
                     <img src="/web12pnd/images/vitoria.svg" alt="">
                     <img src="/web12pnd/images/vitoria.svg" alt="">
                     <img src="/web12pnd/images/vitoria.svg" alt="">
-                    <img src="/web12pnd/images/derrotaDestaque.svg" alt="">
+                    <img src="/web12pnd/images/derrotaDestaq.svg" alt="">
                 </td>
 
             
@@ -95,7 +96,7 @@
                     <img src="/web12pnd/images/empate.svg" alt="">
                     <img src="/web12pnd/images/vitoria.svg" alt="">
                     <img src="/web12pnd/images/vitoria.svg" alt="">
-                    <img src="/web12pnd/images/vitoria.svg" alt="">
+                    <img src="/web12pnd/images/vitoriaDestaq.svg" alt="">
                 </td>
 
             </tr>
@@ -166,314 +167,7 @@
             </td>
 
         </tr>
-        <tr>
-            <td>7</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Cruzeiro</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>8</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Internacional</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>9</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Vasco da Gama</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>10</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Atlético-MG</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>11</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Juventude</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>12</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Bragantina</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>13</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Athletico-PR</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>14</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Grêmio</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>15</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Criciúma</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>16</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Fluminense</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>17</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>EC Vitória</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>18</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Corinthians</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>19</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Cuiabá</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
-        <tr>
-            <td>20</td>
-            <td class="tdespaço"><img src="" alt="" class="icone-time"></td>
-            <td>Atlético-GO</td>
-            <td class="pts">44</td>
-            <td>24</td>
-            <td>13</td>
-            <td>5</td>
-            <td>6</td>
-            <td>39</td>
-            <td>28</td>
-            <td>11</td>
-            <td>
-
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/empate.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-                <img src="/web12pnd/images/vitoria.svg" alt="">
-            </td>
-
-        </tr>
+    
             
             
 
