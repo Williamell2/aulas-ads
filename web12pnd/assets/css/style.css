@@ -1,10 +1,17 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    
+
 }
 body{
+    font-family: "poppins", sans-serif;
     background-color: #f8f9fa;
+    overflow-x: hidden;
 }
 
 table{
@@ -13,13 +20,16 @@ table{
 }
     
 .header{
+    margin-top: -8px;
     background-color: #1a1818;
     color: #ffffff;
     box-shadow: 0px 2px 4px #3a3535;
     border-collapse: collapse;
     font-size: 0.75em;
+    position: fixed;
 }
 #logo-td{
+    margin-top: 40px;
     height: 48px;
     padding-top: 4px;
 }
@@ -47,6 +57,9 @@ background-color: #4c4d4c;
     background-color:  #4c4d4c;
 }
 .tabela-brasileirao{
+    position: absolute;
+    margin-top: 125px;
+    z-index: -1;
     border: 1px solid #e9eaeb;
     border-top: none;
     border-bottom: none;
@@ -57,11 +70,27 @@ background-color: #4c4d4c;
 
 }
 .tabela-brasileirao th{
-    border: 1px solid black;
+border-top: 1px solid #dadec0;
+font-weight: 100;
+color: #70758d;
+padding: 4px;
+height: 35px;
+    
+  
 }
 .tabela-brasileirao td{
-    border: 1px solid black;
+    border-top: 1px solid #dadec0;
+    font-weight: 100;
+    color: #000000;
+    padding: 4px;
+    height: 40px;
+    font-size: 1.2em;
+    
 }
+.tabela-brasileirao  img{
+    width: 25px;
+}
+
 option{
     border: 1px solid #e9eaeb;
     border-top: none;
@@ -77,9 +106,6 @@ option{
     background-color:#f1f3f4;
     border: none;
     color:#000000
-    font-weight: 900;
-    
-
 }
 #tabela-brasileirao-header{
     padding: 15px;
@@ -89,7 +115,30 @@ option{
     color: #70758d;
     
 }
-.icone-time{
-    width: 20px;
-    height: 20px;
+.tabela-colunas-bordas{
+    border-top: none !important;
+
+}
+.titulo-clube{
+    width: 35%;
+    text-align: left;
+}
+.titulo-ultimas5{
+    width: 20%;
+
+}
+.titulo-ultimas5 img{
+    width: 17px;
+}
+.borda-azul{
+    border-left: 3px solid #4285f4;
+}
+.borda-laranja{
+    border-left: 3px solid #fa7b17;
+}
+.borda-verde{
+    border-left: 3px solid #34a853;
+}
+.borda-vermelha{
+    border-left: 3px solid #e44335
 }
